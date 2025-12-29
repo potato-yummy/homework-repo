@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cart = [];
+      cart.push({ name: "키보드", price: 180000 });
+      cart.push({ nmae: "마우스", price: 47000 });
+      cart.push({ name: "컴퓨터", price: 2300000 });
+      cart.push({ name: "모니터", price: 240000 });
+
+      const idx = cart.findIndex((item) => item.name === "마우스");
+      if (idx !== -1) cart.splice(idx, 1);
+
+      cart.sort((a, b) => a.price - b.price);
+      console.log(cart.map((i) => i.name).join(", "));
+    </script>
+  </body>
+</html>
