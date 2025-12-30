@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        name: "이동재",
+        age: 28,
+        scores: { math: 80, english: 60 },
+      };
+
+      function getProperty(obj, key) {
+        return obj[key];
+      }
+
+      function average(scores) {
+        return (scores.math + scores.english) / 2;
+      }
+
+      const copy = structuredClone(student);
+      copy.scores.math = 100;
+
+      console.log(student);
+    </script>
+  </body>
+</html>
